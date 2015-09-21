@@ -2,4 +2,4 @@ language: java
 before_install:
   - ./before_install.sh
 after_success:
-  - mvn clean cobertura:cobertura coveralls:report
+  - mvn clean -DTRAVIS_JOB_ID=$TRAVIS_JOB_ID cobertura:cobertura coveralls:report
